@@ -26,6 +26,11 @@ body {
   padding: 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
+.ul {
+  padding-left: 0px;
+}
+
 .cards,
 .card,
 .view {
@@ -38,6 +43,8 @@ body {
   width: 400px;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
 }
 .cards .card {
   cursor: pointer;
@@ -50,6 +57,7 @@ body {
   transform-style: preserve-3d;
   width: calc(100% / 4 - 10px);
 }
+
 .card .view {
   width: 100%;
   height: 100%;
@@ -62,9 +70,9 @@ body {
   transition: transform 0.25s linear;
 }
 .card .front-view img {
-width: 100%;
-height: 100%;
-  border:1px solid #000
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
 }
 .card .back-view img {
   max-width: 45px;
@@ -105,33 +113,37 @@ height: 100%;
 }
 
 /* --- Responsive Media Queries --- */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .cards {
     height: 350px;
-    width: 350px;
+    width: 366px;
   }
   .card .front-view img {
-    width: 15px;
+    width: 100%;
   }
   .card .back-view img {
     max-width: 35px;
   }
 }
-@media screen and (max-width: 430px) {
+
+@media screen and (max-width: 425px) {
   .cards {
     height: 300px;
-    width: 300px;
+    width: 316px;
   }
   .card .front-view img {
-    width: 15px;
+    width: 100%;
   }
   .card .back-view img {
     max-width: 35px;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 320px) {
   .cards {
     height: 250px;
-    width: 250px;
+    width: 266px;
+  }
+  .card .front-view img {
+    width: 100%;
   }
 }
