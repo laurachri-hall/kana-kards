@@ -32,10 +32,27 @@ function startTimer() {
   }, 1000);
 }
 
+// Stop Timer
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerStarted = false;
+}
+
+// Reset Timer
+function resetTimer() {
+  document.getElementById("timer").textContent = "Time: 00:00";
+}
+
 // Move Counter
 function updateMoveCounter() {
   moveCount++;
   document.getElementById("moveCounter").textContent = `Moves: ${moveCount}`;
+}
+
+// Reset Move Counter
+function resetMoveCounter() {
+  moveCount = 0;
+  document.getElementById("moveCounter").textContent = "Moves: 0";
 }
 
 // Flip Card function
@@ -100,6 +117,13 @@ function shuffleCard() {
   disableDeck = false;
   card1 = card2 = "";
 
+  // Stop and reset timer
+  stopTimer();
+  resetTimer();
+
+  // Reset move counter
+  resetMoveCounter();
+
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
   arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
@@ -115,6 +139,8 @@ function shuffleCard() {
     card.addEventListener("click", flipCard);
   });
 }
+
+// Initial game setup
 shuffleCard();
 
 // Flipcard Event on all cards
