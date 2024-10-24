@@ -1,30 +1,69 @@
-/* --- Variable CSS --- */
-:root {
-  --bgColor: #6563ff;
-  --bgWrapper: #f8f8f8;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Yatra+One&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Yatra One", sans-serif;
+}
+/* Header + Nav */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-body {
+nav {
+  background-color: #9d2933;
+  height: 60px; 
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  
+}
+
+nav a {
+  text-transform: none;
+  color:#000;
+}
+
+nav a:hover {
+  color:darkred;
+}
+
+.navigation {
   display: flex;
-  min-height: 100vh;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
-  background-color: var(--bgColor);
+}
+
+/* Main body */
+body {
+  min-height: 100vh;
+  background-image: url("../images/bg.webp");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 /* Card Area + cards */
 .wrapper {
-  background-color: var(--bgWrapper);
+  background-color: #000;
   border-radius: 10px;
-  padding: 25px;
+  padding: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; 
 }
 
 .ul {
@@ -72,7 +111,7 @@ body {
 .card .front-view img {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+ 
 }
 .card .back-view img {
   max-width: 45px;

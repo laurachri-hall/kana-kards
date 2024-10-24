@@ -1,4 +1,3 @@
-"use strict";
 
 // Selecting Elements
 const cards = document.querySelectorAll(".card");
@@ -120,14 +119,3 @@ shuffleCard();
 cards.forEach((card) => {
   card.addEventListener("click", flipCard);
 });
-
-// Stop Timer
-function stopTimer() {
-  clearInterval(timerInterval);
-}
-
-// Reset Timer
-function resetTimer() {
-  clearInterval(timerInterval);
-  document.getElementById("timer").textContent = "Time: 00:00";
-}
