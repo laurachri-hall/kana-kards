@@ -6,36 +6,6 @@
   box-sizing: border-box;
   font-family: "Yatra One", sans-serif;
 }
-/* Header + Nav */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-nav {
-  background-color: #9d2933;
-  height: 60px; 
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
-  
-}
-
-nav a {
-  text-transform: none;
-  color:#000;
-}
-
-nav a:hover {
-  color:darkred;
-}
-
-.navigation {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
 
 /* Main body */
 body {
@@ -55,6 +25,27 @@ main {
   align-items: center;
   justify-content: center;
   
+}
+
+.heading {
+  margin:10px;
+}
+.instruct {
+  background-color: #9d2933;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  margin-bottom: 10px;
+  border: 5px solid #000;
+}
+
+h1 {
+  padding-top:10px;
+}
+
+p {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: large;
+  padding: 5px;
 }
 
 /* Card Area + cards */

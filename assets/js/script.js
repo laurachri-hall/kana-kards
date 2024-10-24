@@ -1,9 +1,8 @@
-
 // Selecting Elements
 const cards = document.querySelectorAll(".card");
 const cardSounds = [
-  'a.mp3', 'i.mp3', 'u.mp3', 'e.mp3',
-  'o.mp3', 'ka.mp3', 'ki.mp3', 'ku.mp3'
+  '1.mp3', '2.mp3', '3.mp3', '4.mp3',
+  '5.mp3', '6.mp3', '7.mp3', '8.mp3'
 ];
 
 // Create an object to store Audio objects
@@ -14,7 +13,7 @@ let matched = 0;
 let card1, card2;
 let disableDeck = false;
 let moveCount = 0;
-let startTime,timerInterval;
+let startTime, timerInterval;
 let timerStarted = false;
 
 // Preload audio files
@@ -25,12 +24,12 @@ cardSounds.forEach((sound, index) => {
 // Start Timer
 function startTimer() {
   startTime = new Date();
-  timerInterval = setInterval(()=>{
-    const elapsedTime =new Date() - startTime;
-    const minutes = Math.floor(elapsedTime/60000);
-    const seconds = Math.floor((elapsedTime%60000)/1000);
-    document.getElementById("timer").textContent = `Time: ${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
-  },1000);
+  timerInterval = setInterval(() => {
+    const elapsedTime = new Date() - startTime;
+    const minutes = Math.floor(elapsedTime / 60000);
+    const seconds = Math.floor((elapsedTime % 60000) / 1000);
+    document.getElementById("timer").textContent = `Time: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }, 1000);
 }
 
 // Move Counter
@@ -44,14 +43,14 @@ function flipCard({ target: clickedCard }) {
   if (card1 !== clickedCard && !disableDeck) {
     clickedCard.classList.add("flip");
 
-    // Add sounds to cards
-    const cardNumber = clickedCard.querySelector(".back-view img").src.split('/').pop().split('.')[0];
-        audioObjects[cardNumber].play();
+    // Play sound based on the card's data-value
+    const cardValue = clickedCard.dataset.cardValue;
+    audioObjects[cardValue].play();
 
     if (!card1) {
       return (card1 = clickedCard);
     }
-    if(!timerStarted) {
+    if (!timerStarted) {
       startTimer();
       timerStarted = true;
     }
@@ -93,7 +92,6 @@ function matchCards(img1, img2) {
   }, 1200);
 
   updateMoveCounter();
-
 }
 
 // Shuffle Card Function
@@ -110,6 +108,10 @@ function shuffleCard() {
 
     let imgTag = card.querySelector(".back-view img");
     imgTag.src = `assets/images/${arr[i]}.webp`;
+    
+    // Set a data attribute to store the card's value for sound matching
+    card.dataset.cardValue = arr[i];
+
     card.addEventListener("click", flipCard);
   });
 }
