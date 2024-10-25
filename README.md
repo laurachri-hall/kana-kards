@@ -20,14 +20,7 @@
 * [Design](#design)
   * [Colour Scheme](#color-scheme)
   * [Typography](#typography)
-* [Page Features](#page-features)
-  * [Navbar](#navbar)
-  * [Hero-Image](#hero-image)
-  * [Tagline & Call to Action](#tagline--call-to-action)
-  * [Business Ethos](#business-ethos)
-  * [Menu Page](#menu-page)
-  * [Contact Page](#contact-page)
-  * [Footer](#footer)  
+* [Page Features](#page-features) 
 * [Tablet & Mobile View](#tablet--mobile-view)
   * [Desktop, Tablet & Mobile Differences](#desktop-tablet--mobile-differences)
   * [Tablet View](#tablet-view-ipad-miniipad-prosurface-pro)
@@ -170,7 +163,8 @@ To ensure responsivity I used Bootstrap 5. All elements resize and wrap as neces
 - Iconify Design - icons and their associated kit were downloaded from here when Font Awesome enraged me 
 - Adobe Color - for all color palettes and accessibility contrast ratios  
 - logo.com - for shield favicon  
-- Photoshop - to resize and edit images
+- Illustrator - edit images
+- Photoshop - to resize and edit cards
 - Adobe Stock - for main hero image
 - Adobe Firefly - for additional AI generated images
 - Perplexity - for help with elements of code, how to link sound the card
@@ -210,36 +204,20 @@ Testing took place throughout the entire build using Dev Tools on Chrome and on 
 - Chrome   
 - Safari  
 
-OTHER TESTING STUFF?!?!
+### **Bugs and Fixes**  
+- Bug: Cards not matching to sounds. Fix: Found the cards had not been named correctly and so weren't linking to the sounds. Renamed all images to correct file name.
+- Bug: Move and timer not resetting when game resets. Fix: Perplexity helped work out what I was missing in the code to make this happen. 
+
+### **Unsolved Bugs**
+-Bug: Mute button not working. I tried to add a mute button for if people wanted to use the site without the sound. However, I couldn't get it work and decided to remove and possibly try again in another iteration. Though sound is important to the game. 
 
 ### **HTML Validation using W3C Validation**  
-<details open>
-<summary>Index/landing page HTML validation</summary>  
 
-![screenshot of index page w3c html validation for SCOOPS](docs/documentation/w3c_index.png)
-</details>   
-<details>
-<summary>Menu page HTML validation</summary>  
-
-![screenshot of menu page w3c html validation for SCOOPS](docs/documentation/w3c_menu.png)
-</details>  
-<details>
-<summary>Contact page HTML validation</summary>  
-
-![screenshot of contact page w3c html validation for SCOOPS](docs/documentation/w3c_contact.png)
-</details>  
-  
-<br>  
+No errors.
 
 ### **CSS Validation using W3C Validation** 
 
-<details open>
-<summary>SCOOPS CSS validation</summary>  
-
-![screenshot of CSS validation for SCOOPS](docs/documentation/w3c_css.png)
-</details>   
-
-<br>  
+No errors. 1 warning linked to outside style sheets (Google Fonts).
 
 
 ## Credits  
@@ -249,23 +227,23 @@ OTHER TESTING STUFF?!?!
 - [Code Institute](https://codeinstitute.net/ie/) for their HTML/CSS learning material and 'content zoom' module in the Love Running project.
 - [W3Schools](https://www.w3schools.com/) for additional learning material and help with bootstrap cards.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) for flexbox tutorials and guidance.
-- Amy from Code Institute for helping me with the centering the navbar toggle on mobile view and all additional help.
-- [StackOverflow](https://stackoverflow.com/questions/66564503/wrong-validation-on-element-br-in-ul-li-elements) guidance on margin issues 
-- [Bootsnip](https://bootsnipp.com/snippets/7nmOW) for bootstrap contact form component
-- [NSPCC](https://www.nspcc.org.uk/) Design layout inspired by NSPCC homepage.
+- [Perplexity] (perplexity.ai) for code related to sounds and checking over code I had.
+- [JR-Pranav] (https://github.com/Pranav-Jadhav09/memory-card-game-v1/tree/main) for a lot of the basic HTML, CSS and JS code.
+- [SimpleCodingTutorials](https://github.com/SimpleCodingTutorials/Tutorials/tree/main/memory%20game) for JS code related to timer and move counter.
+
+
 
 
 ### **Media References**  
   
 - [Adobe Stock](https://stock.adobe.com/) for the hero image. Credit to graphic designer: Macrovector.
-- Adobe Firefly for generating all other images with AI.
+- [Adobe Firefly](https://firefly.adobe.com/) for generating all other images with AI.
 - [Iconify Design](https://iconify.design/) for all the icons used in this site.
 - [logo.com](https://logo.com/dashboard/your-logo-files) for the favicon used for this site.
 - [Hotpot.ai](https://hotpot.ai/icon-resizer) for resizing the favicons used for this site.
 
 
 ### **Acknowledgements** 
-- I would like to acknowledge my Code Institute facilitator, Amy Richardson, for her calming presence and advice.
+- All the people, including those credited above, who offer free JS resources to educated learners like myself.
 - My family and friends for testing my work and offering positive feedback and the invaluable OAP perspective. 
--Shout out to Tayla Ball for keeping me sane and checking in with me.
 -Rowan, the dog, for being available for cuddles when needed.
