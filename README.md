@@ -20,7 +20,6 @@
 * [Design](#design)
   * [Colour Scheme](#color-scheme)
   * [Typography](#typography)
-  * [Imagery](#imagery)
 * [Page Features](#page-features)
   * [Navbar](#navbar)
   * [Hero-Image](#hero-image)
@@ -113,9 +112,9 @@ On top of the basic structure, the site was developed to make use of JavaScript 
 
 ### Wireframes  
 <details open>
-<summary>Wireframe - Homepage Desktop & Mobile</summary>  
+<summary>Wireframe - Homepage Desktop</summary>  
 
-![homepage wireframe-desktop](/docs/bgg-wireframe.webp)
+![homepage wireframe-desktop](assets/documents/wireframe-KK.png)
 
 ### **5. Surface**  
 
@@ -137,29 +136,30 @@ This website used a palette of autumn colours found in the background. I also ma
 ### **Typography**  
   
 [Google Fonts](https://fonts.google.com/) was used to import the fonts 'Yatra One' and 'Raleway'. I used Yatra One for headings and a more 'Japanese' flavour. Raleway was used for the main content and clarity.
-  
-### **Imagery**  
-
+   
 
 ## Tablet & Mobile View  
  
 ### **Desktop, Tablet & Mobile Differences**  
 
-To ensure responsivity I used Bootstrap 4.6. All elements resize and wrap as necessary, with everything appearing in a column for smaller screens. The header navbar and logo changed as detailed above.
+To ensure responsivity I used Bootstrap 5. All elements resize and wrap as necessary for smaller screnes.
   
 
 ---  
 
 ## Future Features  
 
-- For future development, I would like to include a way for members to add what games they have so it is viewable to other members, who then have the option to request a game at a specific club meeting.
+- For future development, I would like to include more pages with the remained hiragana characters and possibly away to switch from learning hiragana to katakana.
+- I'd like to include a chart of all characters for the user to view.
+- A page with the history of both kana alphabets and their uses today.
 
 ## Technologies Used    
 
 ### **Languages Used**   
 
-- HTML5
-- CSS3
+- HTML
+- CSS
+- JavaScript
 
 ### **Frameworks, Libraries, Technologies & Programs Used**  
 
@@ -173,7 +173,7 @@ To ensure responsivity I used Bootstrap 4.6. All elements resize and wrap as nec
 - Photoshop - to resize and edit images
 - Adobe Stock - for main hero image
 - Adobe Firefly - for additional AI generated images
-- ChatGBT - for club name and all text
+- Perplexity - for help with elements of code, how to link sound the card
 - Google Dev Tools - to debug and for testing responsiveness 
 - Google Lighthouse - for auditing the website
 - W3C Validator - for validating the HTML and CSS code 
