@@ -16,10 +16,12 @@ let moveCount = 0;
 let startTime, timerInterval;
 let timerStarted = false;
 
+
 // Preload audio files
 cardSounds.forEach((sound, index) => {
   audioObjects[index + 1] = new Audio(`assets/sounds/${sound}`);
 });
+
 
 // Start Timer
 function startTimer() {
@@ -109,6 +111,15 @@ function matchCards(img1, img2) {
   }, 1200);
 
   updateMoveCounter();
+}
+
+// Mute/Unmute Functionality
+function toggleMute() {
+  isMuted = !isMuted; // Toggle mute status
+  const muteButtonText = isMuted ? "Unmute" : "Mute";
+
+  // Update button text (assuming you have a button with id 'muteButton')
+  document.getElementById("muteButton").textContent = muteButtonText; 
 }
 
 // Shuffle Card Function
